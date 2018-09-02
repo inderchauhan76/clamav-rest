@@ -1,0 +1,11 @@
+az container create \
+    --resource-group indertest \
+    --location australiaeast \
+    --name clamav-rest \
+    --image docker.io/inderchauhan/clamav-rest \
+    --dns-name-label clamav-rest \
+    --ports 8080 \
+    --azure-file-volume-account-name indertest920c \
+    --azure-file-volume-account-key mMjfP5FgJWMX/mY1yRl4V2UAYVm1IxZ7NFpwWuoNFwv/EEi6cbsnGzBrqXmaV6pmeqsIbhprIz4fdrKEaMUHXA== \
+    --azure-file-volume-share-name  clamav \
+    --azure-file-volume-mount-path /var/logs/
