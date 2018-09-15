@@ -10,6 +10,8 @@ set -m
 host=${CLAMD_HOST:-0.0.0.0}
 port=${CLAMD_PORT:-3310}
 
+service ssh start
+
 echo "using clamd server: $host:$port"
 
 /bootstrap.sh & 
